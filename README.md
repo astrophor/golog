@@ -2,32 +2,31 @@
 
 ## use standard log
 ```
-package golog
+package main
 
 import (
 	"log"
-	"testing"
+
+	"github.com/astrophor/golog"
 )
 
 func main() {
-	NewStdLog("./", "test", "", uint64(1)<<20, 1)
-
+	golog.NewStdLog("./", "test", "", uint64(1)<<20, 1)
 	log.Println("this is standard log")
 }
 ```
 
 ## use zap
 ```
-package golog
+package main
 
 import (
-	"testing"
-
+	"github.com/astrophor/golog"
 	"go.uber.org/zap"
 )
 
 func main() {
-	logger := NewZapLog("./", "zap_test", "", uint64(1)<<20, 1)
+	logger := golog.NewZapLog("./", "zap_test", "", uint64(1)<<20, 1)
 
 	logger.Info("this is a info log",
 		zap.String("place_id", "test"),
