@@ -130,7 +130,6 @@ func (l *LogWriter) rotate() error {
 	}
 
 	l.logID++
-
 	return l.open()
 }
 

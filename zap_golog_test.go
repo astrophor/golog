@@ -79,7 +79,7 @@ func TestZapLog(t *testing.T) {
 
 	logger.Info("this is a info log",
 		zap.String("place_id", "test"),
-		zap.Int("value", 12))
+		zap.Int("value", 12), zap.String("a", "a"))
 }
 
 func fakeMessages(n int) []string {

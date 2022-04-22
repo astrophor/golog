@@ -11,4 +11,5 @@ func TestStdLog(t *testing.T) {
 	log.Println("this is standard log")
 
     log.Println("test")
+    log.Println("test1")
 }
