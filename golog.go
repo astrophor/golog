@@ -70,7 +70,6 @@ func (l *LogWriter) Write(p []byte) (n int, err error) {
 
 	n, err = l.logFd.Write(p)
 	l.logSize += uint64(n)
-
 	return n, err
 }
 
